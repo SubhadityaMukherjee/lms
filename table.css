@@ -1,0 +1,18 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: url(nice1.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+}
+.box{
+    width: 300px;
+    padding: 40px;
+    background: #191919;
+    top: 200%;
+    left: 50%
+    position: absolute;
+    transform: translate(-50%,100%);
+    text-align: center;
+  }

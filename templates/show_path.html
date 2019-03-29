@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Shortest Paths</title>
+    <link rel="stylesheet" type="text/css" href= "{{ url_for('static',filename='styles/style_index.css') }}">
+</head>
+<body>
+<div class="wrapper">
+
+
+<!-- <iframe src="/static/styles/distancecomp.txt" height="800" width="800" allowfullscreen></iframe> -->
+<iframe id="myFrame" src="/static/styles/distancecomp.txt" height="800" width="800" allowfullscreen></iframe>
+
+<script>
+var frame = document.getElementById('myFrame');
+    frame.onload = function () {
+        var body = frame.contentWindow.document.querySelector('body');
+        body.style.color = 'red';
+        body.style.fontSize = '20px';
+        body.style.lineHeight = '20px';
+    };
+</script>
+
+
+</div>
+
+</body>
+</html>

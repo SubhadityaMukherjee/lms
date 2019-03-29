@@ -1,0 +1,97 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: url(nice1.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+}
+.logo2{
+  width: 350px;
+  height: 350px;
+  position: absolute;
+  transform: translate(100%,45%);
+}
+
+.box{
+    width: 300px;
+    padding: 40px;
+    background: #191919;
+    top: 200%;
+    left: 50%
+    position: absolute;
+<<<<<<< HEAD:static/styles/signup.css
+    transform: translate(220%,45%);
+=======
+    transform: translate(200%,25%);
+>>>>>>> fc779f662a6a91f02fd26832567027f4e24b454b:signup.css
+    text-align: center;
+}
+.box h1{
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.box input[type="text"],.box input[type = "password"]{
+  border:0;
+  background: none;
+  display: block;
+  margin: 28px auto;
+  text align: center;
+  border: 2px solid #3498db;
+  padding: 14px 10px;
+  width: 200px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+.box input[type="text"],.box input[type = "password"]{
+  border:0;
+  background: none;
+  display: block;
+  margin: 28px auto;
+  text align: center;
+  border: 2px solid #3498db;
+  padding: 14px 10px;
+  width: 200px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+.box input[type="text"],.box input[type = "password"]{
+  border:0;
+  background: none;
+  display: block;
+  margin: 28px auto;
+  text align: center;
+  border: 2px solid #3498db;
+  padding: 14px 10px;
+  width: 200px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+.box input[type="text"]:focus,.box input[type = "password"]:focus{
+width: 280px;
+border-color: #2ecc71;
+}
+.box input[type="submit"]{
+  border:0;
+  background: none;
+  display: block;
+  margin: 28px auto;
+  text align: center;
+  border: 2px solid #3498db;
+  padding: 14px 40px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+.box input[type = "submit"]:hover{
+  background: #2ecc71;
+}

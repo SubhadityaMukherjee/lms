@@ -1,0 +1,53 @@
+
+
+{% block content %}
+    <h1>Enter Details</h1>
+    <form action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.name.label }}<br>
+            {{ form.name(size=32) }}
+        </p>
+        <p>
+            {{ form.address.label }}<br>
+            {{ form.address(size=32) }}
+        </p>
+        <p>
+            {{ form.tshirt.label }}<br>
+            {{ form.tshirt(size=32) }}
+        </p>
+        <p>
+            {{ form.shirt.label }}<br>
+            {{ form.shirt(size=32) }}
+        </p>
+        <p>
+            {{ form.jeans.label }}<br>
+            {{ form.jeans(size=32) }}
+        </p>
+        <p>
+            {{ form.trousers.label }}<br>
+            {{ form.trousers(size=32) }}
+        </p>
+        <p>
+            {{ form.curtain.label }}<br>
+            {{ form.curtain(size=32) }}
+        </p>
+        <p>
+            {{ form.towel.label }}<br>
+            {{ form.towel(size=32) }}
+        </p>
+        <p>
+            {{ form.blanket.label }}<br>
+            {{ form.blanket(size=32) }}
+        </p>
+        <p>
+            {{ form.bedsheet.label }}<br>
+            {{ form.bedsheet(size=32) }}
+        </p>
+
+
+
+
+        <p>{{ form.submit() }}</p>
+    </form>
+{% endblock %}
