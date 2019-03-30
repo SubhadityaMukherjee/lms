@@ -1,24 +1,40 @@
-<html>
+<!DOCTYPE html>
+<html lang="en" >
+
 <head>
-    <meta charset="utf-8">
-    <title>Features</title>
-    <link rel="stylesheet" type="text/css" href= "{{ url_for('static',filename='styles/style_index.css') }}">
 
+  <meta charset="UTF-8">
+  <title>Follow-along Links</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700" rel="stylesheet">
+
+
+      <link rel="stylesheet" href= "{{ url_for('static',filename='styles/style_index.css') }}">
 </head>
-<body>
-    <h1>Click on any of these links for features</h1>
-<div class="wrapper">
-  <a class="first after" href="/signup">LOGIN</a>
-</div>
-<div class="wrapper">
-  <a class="second after" href="/table">NEW ORDER</a>
-</div>
-<div class="wrapper">
-  <a class="third after" href="/path">VIEW SHORTEST PATHS</a>
-</div>
-<div class="wrapper">
-  <a class="fourth before after" href="/graph">VIEW GRAPH</a>
-</div>
-</body>
-</html>
 
+<body>
+
+  <main>
+  <main>
+  <h1>Click to visit </h1>
+  <nav>
+    <a href="/signup">Login</a>
+    <a href="/table">New Order</a>
+    <a href="/path">View Shortest Path</a>
+    <a href="/graph">View Graph</a>
+    <a href="/ml">Smart summary</a>
+  </nav>
+  <!-- <img src="/static/images/logo2.jpeg"> -->
+</main>
+
+
+
+
+    <script src="/static/js/main_index.js"></script>
+
+
+
+
+</body>
+
+</html>

@@ -6,6 +6,7 @@ import json
 import networkx as nx
 import random
 import matplotlib.pyplot as plt
+import numpy as np
 
 class Graph():
     def __init__(self):
@@ -103,14 +104,17 @@ class Dhobi:
         else:
             print('Try again')
 
-    def newUser(self):
-        e = enp()
-        self.username = input('Enter username: ')
-        self.password = input('Enter password: ')
-        self.phone = input('Enter phone: ')
-        self.add = input('Enter address: ')
+    def newUser(self,user,passw,phone):
+        e = enp.encp()
+
         with open('Database.csv','a+') as f:
-            f.write('{},{},{}\n'.format(self.username,e.en(self.password),self.phone,self.add))
+            f.write('{},{},{}\n'.format(user,e.en(passw),phone))
+
+    def bargraph(self):
+        df = pd.read_csv("Table.csv")
+        df.set_index('Name')[['Tshirt', 'Shirt','Jeans','Trousers','Curtain','Towel','Blanket','Bedsheet']].plot.bar()
+        # plt.show()
+        plt.savefig('static/styles/bar.png',dpi=600)
 
     def distance(self):
         f = open('Table.csv','r')
@@ -148,7 +152,7 @@ class Dhobi:
         G =nx.Graph()
         G.add_edges_from(ls)
         nx.draw(G,with_labels=True)
-        plt.savefig('static/images/test.png')
+        plt.savefig('static/images/test.png',dpi=600)
 
         strfi = ''
         for a in d:
@@ -162,4 +166,4 @@ class Dhobi:
 
 
 # a = Dhobi()
-# a.distance()
+# a.bargraph()

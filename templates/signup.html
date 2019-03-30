@@ -1,25 +1,48 @@
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>Signup page</title>
-    <link rel="stylesheet" type="text/css" href= "{{ url_for('static',filename='styles/signup.css') }}">
-</head>
-<body>
-<<<<<<< HEAD:templates/signup.html
-        <form class="box" action="" method="post" novalidate>
-            {{ form.hidden_tag() }}
-=======
-        <div class="loginbox">
-          <img src="logo2.jpeg" class="logo2">
-        <form class="box" action="index.html" method="post">
->>>>>>> fc779f662a6a91f02fd26832567027f4e24b454b:signup.html
-          <h1>Sign Up</h1>
-            <input type="text" name="" placeholder=" Username">
-            <input type="text" name=""placeholder="Enter your address">
-            <input type="password" name="" placeholder="Enter Password">
-            <input type="submit" name="" value="Sign up">
 
-        </form>
-    </div>
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Modal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <!-- <link rel="stylesheet" media="screen" href="/static/styles/bootstrap.min.css"> -->
+                <!-- <link rel="stylesheet" href="/static/styles/bootstrap-reboot.min.css"> -->
+       <link rel="stylesheet" href= "{{ url_for('static',filename='styles/signup.css') }}">
+</head>
+
+<body>
+  <div id="modal">
+    <div id="modal-content">
+      {% block content %}
+
+
+    <h1>Sign Up</h1>
+    <form action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.email.label }}<br>
+            {{ form.email(size=25) }}
+        </p>
+        <p>
+            {{ form.password.label }}<br>
+            {{ form.password(size=25) }}
+        </p>
+        <p>
+            {{ form.phone.label }}<br>
+            {{ form.phone(size=25) }}
+        </p>
+
+        <p>{{ form.submit() }}</p>
+    </form>
+{% endblock %}
+  </div>
 </body>
+
 </html>
+
+

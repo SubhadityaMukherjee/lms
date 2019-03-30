@@ -2,6 +2,7 @@ from flask import Flask, render_template, json, request,flash, redirect
 import prog
 from flask_wtf.csrf import CSRFProtect, CSRFError
 from forms import LoginForm
+from logform import LoginForm2
 import os
 import random
 
@@ -14,33 +15,29 @@ app = Flask(__name__)
 SECRET_KEY = os.urandom(32)
 app.config['SECRET_KEY'] = SECRET_KEY
 
+
 # csrf = CSRFProtect(app)
 # app.config.from_object('config.settings')
 
 csrf.init_app(app)
+
 
 @app.route('/')
 def main():
 
     return render_template('main_index.html')
 
-@app.route('/signup')
-def sign():
-    return render_template('index.html')
 
-@app.route('/signup', methods=['POST'])
+@app.route('/signup', methods=['GET', 'POST'])
 def my_form_post():
-    print('form: '+request.form)
-    text = [request.form['text'],request.form['password'],request.form['submit']]
-    print(text)
-    return text
-    # return render_template('index.html')
-    # return redirect('/')
+    form = LoginForm2()
+    if form.validate_on_submit():
+        dh.newUser(form.data['email'],form.data['password'],form.data['phone'])
+        return redirect('/')
 
-# @app.route('/table')
-# def showTable():
-#     form = LoginForm()
-#     return render_template('form.html', title='Details', form=form)
+    return render_template('signup.html', title='Sign In', form=form)
+
+
 
 @app.route('/table', methods=['GET', 'POST'])
 def dispTable():
@@ -74,6 +71,10 @@ def showGraph():
 def showPath():
     return render_template('show_path.html')
 
+@app.route('/ml')
+def showsumm():
+    dh.bargraph()
+    return render_template('show_summ.html')
 
 if __name__ == "__main__":
     app.debug = True

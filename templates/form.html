@@ -1,48 +1,65 @@
 
+<!DOCTYPE html>
+<html>
 
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Modal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <!-- <link rel="stylesheet" media="screen" href="/static/styles/bootstrap.min.css"> -->
+                <!-- <link rel="stylesheet" href="/static/styles/bootstrap-reboot.min.css"> -->
+       <link rel="stylesheet" href= "{{ url_for('static',filename='styles/table.css') }}">
+</head>
+
+<body>
+  <div id="modal">
+    <div id="modal-content">
 {% block content %}
+
     <h1>Enter Details</h1>
     <form action="" method="post" novalidate>
         {{ form.hidden_tag() }}
         <p>
             {{ form.name.label }}<br>
-            {{ form.name(size=32) }}
+            {{ form.name(size=10) }}
         </p>
         <p>
             {{ form.address.label }}<br>
-            {{ form.address(size=32) }}
+            {{ form.address(size=10) }}
         </p>
         <p>
             {{ form.tshirt.label }}<br>
-            {{ form.tshirt(size=32) }}
+            {{ form.tshirt(size=10) }}
         </p>
         <p>
             {{ form.shirt.label }}<br>
-            {{ form.shirt(size=32) }}
+            {{ form.shirt(size=10) }}
         </p>
         <p>
             {{ form.jeans.label }}<br>
-            {{ form.jeans(size=32) }}
+            {{ form.jeans(size=10) }}
         </p>
         <p>
             {{ form.trousers.label }}<br>
-            {{ form.trousers(size=32) }}
+            {{ form.trousers(size=10) }}
         </p>
         <p>
             {{ form.curtain.label }}<br>
-            {{ form.curtain(size=32) }}
+            {{ form.curtain(size=10) }}
         </p>
         <p>
             {{ form.towel.label }}<br>
-            {{ form.towel(size=32) }}
+            {{ form.towel(size=10) }}
         </p>
         <p>
             {{ form.blanket.label }}<br>
-            {{ form.blanket(size=32) }}
+            {{ form.blanket(size=10) }}
         </p>
         <p>
             {{ form.bedsheet.label }}<br>
-            {{ form.bedsheet(size=32) }}
+            {{ form.bedsheet(size=10) }}
         </p>
 
 
@@ -51,3 +68,8 @@
         <p>{{ form.submit() }}</p>
     </form>
 {% endblock %}
+ </div>
+</body>
+
+</html>
+

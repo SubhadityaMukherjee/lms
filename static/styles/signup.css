@@ -1,97 +1,82 @@
-body{
-    margin: 0;
-    padding: 0;
-    background: url(nice1.jpg);
-    background-size: cover;
-    background-position: center;
-    font-family: sans-serif;
+a {
+  text-decoration: none;
 }
-.logo2{
-  width: 350px;
-  height: 350px;
-  position: absolute;
-  transform: translate(100%,45%);
+body {
+  background: -webkit-linear-gradient(bottom, #bb164a, #ff2e54, #ff8888);
+  background-repeat: no-repeat;
 }
-
-.box{
-    width: 300px;
-    padding: 40px;
-    background: #191919;
-    top: 200%;
-    left: 50%
-    position: absolute;
-<<<<<<< HEAD:static/styles/signup.css
-    transform: translate(220%,45%);
-=======
-    transform: translate(200%,25%);
->>>>>>> fc779f662a6a91f02fd26832567027f4e24b454b:signup.css
-    text-align: center;
+label {
+  font-family: "Raleway", sans-serif;
+  font-size: 11pt;
 }
-.box h1{
-  color: white;
-  text-transform: uppercase;
-  font-weight: 500;
+#forgot-pass {
+  color: #ff2e54;
+  font-family: "Raleway", sans-serif;
+  font-size: 10pt;
+  margin-top: 3px;
+  text-align: right;
 }
-.box input[type="text"],.box input[type = "password"]{
-  border:0;
-  background: none;
-  display: block;
-  margin: 28px auto;
-  text align: center;
-  border: 2px solid #3498db;
-  padding: 14px 10px;
-  width: 200px;
-  outline: none;
-  color: white;
-  border-radius: 24px;
-  transition: 0.25s;
+#modal {
+  background: #ebebeb;
+  border-radius: 8px;
+  box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
+  height: 410px;
+  margin: 6rem auto 8.1rem auto;
+  width: 329px;
 }
-.box input[type="text"],.box input[type = "password"]{
-  border:0;
-  background: none;
-  display: block;
-  margin: 28px auto;
-  text align: center;
-  border: 2px solid #3498db;
-  padding: 14px 10px;
-  width: 200px;
-  outline: none;
-  color: white;
-  border-radius: 24px;
-  transition: 0.25s;
+#modal-content {
+  padding: 12px 44px;
 }
-.box input[type="text"],.box input[type = "password"]{
-  border:0;
-  background: none;
-  display: block;
-  margin: 28px auto;
-  text align: center;
-  border: 2px solid #3498db;
-  padding: 14px 10px;
-  width: 200px;
-  outline: none;
-  color: white;
-  border-radius: 24px;
-  transition: 0.25s;
+#modal-title {
+  font-family: "Raleway Thin", sans-serif;
+  letter-spacing: 4px;
+  padding-bottom: 23px;
+  padding-top: 13px;
+  text-align: center;
 }
-.box input[type="text"]:focus,.box input[type = "password"]:focus{
-width: 280px;
-border-color: #2ecc71;
+#signup {
+  color: #ff2e54;
+  font-family: "Raleway", sans-serif;
+  font-size: 10pt;
+  margin-top: 16px;
+  text-align: center;
 }
-.box input[type="submit"]{
-  border:0;
-  background: none;
-  display: block;
-  margin: 28px auto;
-  text align: center;
-  border: 2px solid #3498db;
-  padding: 14px 40px;
-  outline: none;
-  color: white;
-  border-radius: 24px;
-  transition: 0.25s;
+#submit-btn {
+  background: -webkit-linear-gradient(left, #ff4e4e, #a61e50);
+  border: none;
+  border-radius: 21px;
+  box-shadow: 0px 1px 8px #a61e50;
   cursor: pointer;
+  color: white;
+  font-family: "Raleway SemiBold", sans-serif;
+  height: 42.3px;
+  margin: 0 auto;
+  margin-top: 50px;
+  transition: 0.25s;
+  width: 153px;
 }
-.box input[type = "submit"]:hover{
-  background: #2ecc71;
+#submit-btn:hover {
+  box-shadow: 0px 1px 18px #a61e50;
+}
+.form {
+  align-items: left;
+  display: flex;
+  flex-direction: column;
+}
+.form-border {
+  background: -webkit-linear-gradient(left, #ff4e4e, #a61e50);
+  height: 1px;
+  width: 100%;
+}
+.form-content {
+  background: #ebebeb;
+  border: none;
+  outline: none;
+  padding-top: 14px;
+}
+.underline-title {
+  background: -webkit-linear-gradient(right, #ff4e4e, #a61e50);
+  height: 2px;
+  margin: -1.1rem auto 0 auto;
+  width: 89px;
 }
